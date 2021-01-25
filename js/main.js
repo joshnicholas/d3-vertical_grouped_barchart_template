@@ -11,7 +11,7 @@ var colour_choices = ["rgb(179, 179, 180)",
 "rgb(255, 127, 15)",
 "rgb(245, 189, 44)",
 "rgb(179, 179, 180)",
-"rgb(128, 128, 128)"]
+"rgb(128, 128, 128)"];
 
 function draw_bars(data) {
 
