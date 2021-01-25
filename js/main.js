@@ -2,7 +2,16 @@
 
 iframeMessenger.enableAutoResize();
 
-var data_path = "data/something.csv"
+var data_path = "data/something.csv";
+
+var colour_choices = ["rgb(179, 179, 180)",
+"rgb(0, 178, 255)",
+"rgb(255, 127, 15)",
+"rgb(0, 178, 255)",
+"rgb(255, 127, 15)",
+"rgb(245, 189, 44)",
+"rgb(179, 179, 180)",
+"rgb(128, 128, 128)"]
 
 function draw_bars(data) {
 
@@ -73,14 +82,7 @@ function draw_bars(data) {
 		// colours for the bars 
 		
 		color = d3.scaleOrdinal()
-			.range(["rgb(179, 179, 180)",
-			"rgb(0, 178, 255)",
-			"rgb(255, 127, 15)",
-			"rgb(0, 178, 255)",
-			"rgb(255, 127, 15)",
-			"rgb(245, 189, 44)",
-			"rgb(179, 179, 180)",
-			"rgb(128, 128, 128)"])
+			.range(colour_choices)
 
 		// create axes
 
@@ -158,7 +160,7 @@ function draw_bars(data) {
 		svg.append("g")
 			.call(legend);
 
-} // end init
+} 
 
 var q = d3.queue()
         .defer(d3.csv, data_path)
@@ -176,3 +178,4 @@ var q = d3.queue()
 				}
 			})
         });
+
