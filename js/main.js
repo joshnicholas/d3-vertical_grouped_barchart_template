@@ -11,7 +11,11 @@ var colour_choices = ["rgb(179, 179, 180)",
 "rgb(255, 127, 15)",
 "rgb(245, 189, 44)",
 "rgb(179, 179, 180)",
-"rgb(128, 128, 128)"];
+"rgb(128, 128, 128)"]
+
+// set the maximum extent of the x axis:
+
+var x_max = 100;
 
 function draw_bars(data) {
 
@@ -76,7 +80,7 @@ function draw_bars(data) {
 			.padding(0.05)
 		
 		x = d3.scaleLinear()
-			.domain([0, 100])
+			.domain([0, x_max])
 			.rangeRound([margin.left, width - margin.right])
 
 		// colours for the bars 
@@ -178,4 +182,3 @@ var q = d3.queue()
 				}
 			})
         });
-
